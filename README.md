@@ -10,50 +10,50 @@ This package consists:
 
 Go to the *ExecutableJarFiles* directory.
 
-* **To run the *Dynamic Programming* based implementation: go to ExecutableJarFiles directly and run the following command.**
+* **To run the Dynamic Programming based implementation: go to ExecutableJarFiles directly and run the following command.**
  
  ```
  java -jar DynamicProgrammingMKP.jar
  ```
- This will read the data from the file **data.pref** in the project directly and out put the result to the  **resultOfDynamicProgramming.pref** file.
+ This will read the data from the file *data.pref* in the project directly and out put the result to the  *resultOfDynamicProgramming.pref* file.
  
 ```
  java -jar DynamicProgrammingMKP.jar <file_path>
  ```
- This will read the data from the file specified in the file_path and out put the result to the **resultOfDynamicProgramming.pref** file.
+ This will read the data from the file specified in the *file_path* and out put the result to the *resultOfDynamicProgramming.pref* file.
  
- * **To run the *Genetic Search* based implementation: go to ExecutableJarFiles directly and run the following command.**
+ * **To run the Genetic Search based implementation: go to ExecutableJarFiles directly and run the following command.**
  ```
   java -jar GeneticSearchMKP.jar 
   ```
- This will read the data from the file **data.pref** in the project directly and out put the result to the **resultOfGenetic.pref** file.
+ This will read the data from the file *data.pref* in the project directly and out put the result to the *resultOfGenetic.pref* file.
  
  ```
   java -jar GeneticSearchMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the file_path and out put the result to the **resultOfGenetic.pref** the file. 
+  This will read the data from the file specified in the *file_path* and out put the result to the *resultOfGenetic.pref* the file. 
   ```
     java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population>
     
    ```
-   siz_of_the_intial_population argument sets the initial population size to the given value. The default population size is 4. 
+   *siz_of_the_intial_population* argument sets the initial population size to the given value. The default population size is 4. 
  
   
- * **To run the *Simulated Annealing* based implementation: Go to ExecutableJarFiles directly and run the following command.**
+ * **To run the Simulated Annealing based implementation: Go to ExecutableJarFiles directly and run the following command.**
  ```
   java -jar SimulatedAnnealingMKP.jar
   ```
- This will read the data from the file **data.pref** in the project directly and out put the result to the **resultOfSimulatedAnnealiing.preff** file.
+ This will read the data from the file *data.pref* in the project directly and out put the result to the *resultOfSimulatedAnnealiing.preff* file.
  
  ```
   java -jar SimulatedAnnealingMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the file_path and out put the result to the **resultOfSimulatedAnnealiing.pref** file. 
+  This will read the data from the file specified in the *file_path* and out put the result to the *resultOfSimulatedAnnealiing.pref* file. 
   ```
     java -jar SimulatedAnnealingMKP.jar <file_path> <initial_temperature_value>
     
    ```
-   initial_temperature-value argument sets the initial temperature value to the given value. Default temperature value is 10000.
+   *initial_temperature-value* argument sets the initial temperature value to the given value. Default temperature value is 10000.
     
 ## How to run source code.
 * Open the project as a maven project. 
