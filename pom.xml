@@ -31,7 +31,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>CommonMain/implementAllMDKSearchers</mainClass>
+                            <mainClass>SimulatedAnnealingKnapsack/SimulatedAnnealingKnapsackMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

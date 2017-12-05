@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Class implemented to write the optimum state to a file.
  */
-public class OutputWriter extends GeneticSearchKnapsack.OutputWriter {
+public class OutputWriter {
     public void writeOutput(List<Integer> solution, String filePath) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
 

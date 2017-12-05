@@ -21,7 +21,7 @@ public class SimulatedAnnealingKnapsackMain {
 
         } catch (Exception e) {
             System.out.println("If inputs arguments are not given, then"
-                    + "default"
+                    + " default"
                     + "values are taken.");
         }
 

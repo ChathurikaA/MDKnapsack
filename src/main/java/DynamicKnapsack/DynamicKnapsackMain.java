@@ -17,8 +17,8 @@ public class DynamicKnapsackMain {
                 inputFile = args[0];
             }
         } catch (Exception e) {
-            System.out.println("If all input arguments are not given default"
-                    + "values are taken.");
+            System.out.println("If input argument is not given, then default"
+                    + " value is taken.");
         }
 
         //Intialize the problem
