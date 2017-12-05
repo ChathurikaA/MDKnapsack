@@ -56,8 +56,7 @@ Go to the *ExecutableJarFiles* directory.
    initial_temperature-value argument sets the initial temperature value to the given value. Default temperature value is 10000.
     
 ## How to run source code.
-* Open the project as maven project. 
-* Go to project directory and run the mvn clean install to build the project.
-* you can run the main class named with suffix **Main** in the each package. 
-* This will read the data from "data.pref" file in the same directory and out put the result to the file name with **result** prefix.   
+* Open the project as a maven project. 
+* Go to project directory and run the command `mvn clean install` to build the project.
+* you can run the main class named with suffix **Main** in the each package except the commonMain package. This will read the data from "data.pref" file in the same directory and out put the result to the file name with **result** prefix.   
  
