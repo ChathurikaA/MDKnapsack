@@ -10,19 +10,19 @@ This package consists:
 
 Go to the *ExecutableJarFiles* directory.
 
-* To run the **Dynamic Programming** based implementation: Go to ExecutableJarFiles directly and run the following command.
+* **To run the *Dynamic Programming* based implementation: go to ExecutableJarFiles directly and run the following command.**
  
  ```
  java -jar DynamicProgrammingMKP.jar
  ```
- This will read the data from the file **data.pref** in the project directly and out put the result to **resultOfDynamicProgramming.pref** file.
+ This will read the data from the file **data.pref** in the project directly and out put the result to the  **resultOfDynamicProgramming.pref** file.
  
 ```
  java -jar DynamicProgrammingMKP.jar <file_path>
  ```
- This will read the data from the file specified in the file_path and out put the result to **resultOfDynamicProgramming.pref** file.
+ This will read the data from the file specified in the file_path and out put the result to the **resultOfDynamicProgramming.pref** file.
  
- * To run the **Genetic Search** based implementation: Go to ExecutableJarFiles directly and run the following command.
+ * **To run the *Genetic Search* based implementation: go to ExecutableJarFiles directly and run the following command.**
  ```
   java -jar GeneticSearchMKP.jar 
   ```
@@ -31,7 +31,7 @@ Go to the *ExecutableJarFiles* directory.
  ```
   java -jar GeneticSearchMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the file_path and out put the result to the **resultOfGenetic.pref** file. 
+  This will read the data from the file specified in the file_path and out put the result to the **resultOfGenetic.pref** the file. 
   ```
     java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population>
     
@@ -39,16 +39,16 @@ Go to the *ExecutableJarFiles* directory.
    siz_of_the_intial_population argument sets the initial population size to the given value. The default population size is 4. 
  
   
- * To run the **Simulated Annealing** based implementation: Go to ExecutableJarFiles directly and run the following command.
+ * **To run the *Simulated Annealing* based implementation: Go to ExecutableJarFiles directly and run the following command.**
  ```
   java -jar SimulatedAnnealingMKP.jar
   ```
- This will read the data from the file **data.pref** in the project directly and out put the result to **resultOfSimulatedAnnealiing.preff** file.
+ This will read the data from the file **data.pref** in the project directly and out put the result to the **resultOfSimulatedAnnealiing.preff** file.
  
  ```
   java -jar SimulatedAnnealingMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the file_path and out put the result to **resultOfSimulatedAnnealiing.pref** file. 
+  This will read the data from the file specified in the file_path and out put the result to the **resultOfSimulatedAnnealiing.pref** file. 
   ```
     java -jar SimulatedAnnealingMKP.jar <file_path> <initial_temperature_value>
     
