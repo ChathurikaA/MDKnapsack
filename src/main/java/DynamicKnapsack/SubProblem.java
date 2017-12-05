@@ -2,6 +2,9 @@ package DynamicKnapsack;
 
 import java.util.List;
 
+/**
+ * class implemented to store sub problem for Muti-dimensional knapsack problem at each iteration.
+ */
 public class SubProblem {
     Integer taskIndex;
     Integer score;

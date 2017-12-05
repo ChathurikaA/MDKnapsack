@@ -3,6 +3,7 @@ package GeneticSearchKnapsack;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
@@ -13,8 +14,8 @@ public class LocalSearchKnapsackMain {
     public static void main(String[] args) throws IOException, MKPImplemetationException {
 
         String inputFile = "./data.pref";
-        String outPutFile = "result.pref";
-        boolean nofesiableSolution = false;
+        String outPutFile = "resultOfGenetic.pref";
+        boolean noFesiableSolution = false;
         int initialPopulation = 4;
         int count = 0;
 
@@ -24,15 +25,11 @@ public class LocalSearchKnapsackMain {
             }
 
             if (null != args[1] && !args[1].isEmpty()) {
-                outPutFile = args[1];
-            }
-
-            if (null != args[2] && !args[2].isEmpty()) {
-                initialPopulation = Integer.parseInt(args[2]);
+                initialPopulation = Integer.parseInt(args[1]);
             }
 
         } catch (Exception e) {
-            System.out.println("If all input arguments are not given default"
+            System.out.println("If input arguments are not given then, default"
                     + "values are taken.");
         }
 
@@ -48,12 +45,11 @@ public class LocalSearchKnapsackMain {
         try {
            population = new Population(initialPopulation);
         } catch (MKPImplemetationException e) {
-            nofesiableSolution = true;
-//            if(Population.states.size() == 1 && Population.size != 1) {
-//                nofesiableSolution = true;
-//            } else {
-//                throw new MKPImplemetationException(e);
-//            }
+            if(Population.states.size() == 1 && Population.size != 1) {
+                noFesiableSolution = true;
+            } else {
+                throw new MKPImplemetationException(e);
+            }
         }
 
         GeneticSearcher geneticSearcher = new GeneticSearcher();
@@ -61,7 +57,7 @@ public class LocalSearchKnapsackMain {
         //Carryout genetic search operation.
         State repaired;
 
-        if (!nofesiableSolution) {
+        if (!noFesiableSolution) {
         for (count = 0; count <= 10000; count++) {
             boolean expire = false;
             int j = 0;
@@ -72,7 +68,7 @@ public class LocalSearchKnapsackMain {
                 //repair state.
                 repaired = repairOperator.repairState(state);
 
-                if(j > 10) {
+                if(j > 100) {
                     expire = true;
                 }
                 j++;
@@ -86,14 +82,15 @@ public class LocalSearchKnapsackMain {
         //Output the results
         OutputWriter writer = new OutputWriter();
 
-        if (!nofesiableSolution) {
+        if (!noFesiableSolution) {
             writer.writeOutput(Population.maxState.form, outPutFile);
         } else {
-            List<Integer> zeroStateform = new ArrayList<>();
-            IntStream.range(0, Problem.numberOfTasks).forEach(i -> {
-                zeroStateform.add(9);
-            });
-          // writer.writeOutput((Population.states.get(0)).form, outPutFile);
+            List<Integer> list = new ArrayList();
+            for (Map.Entry<Long, State> entry : Population.states.entrySet())
+            {
+                list = entry.getValue().form;
+            }
+            writer.writeOutput(list, outPutFile);
         }
     }
 }

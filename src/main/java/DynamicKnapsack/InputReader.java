@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class implemented to write the optimum state to a file.
+ */
 public class InputReader {
 
     public Problem readInput(String pathName) throws IOException {

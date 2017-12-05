@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class implemented to solve each sub problem and to get the optimum state.
+ */
 public class DynamicKnapsackSolver {
 
     private static Map<String, Integer> globalTable = new HashMap<>();

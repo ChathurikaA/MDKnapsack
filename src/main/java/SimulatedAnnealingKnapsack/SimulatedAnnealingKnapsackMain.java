@@ -8,22 +8,19 @@ public class SimulatedAnnealingKnapsackMain {
     public static void main(String... args) throws IOException, MKPImplemetationException {
 
         String inputFile = "./data.pref";
-        String outPutFile = "result.pref";
+        String outPutFile = "resultOfSimulatedAnnealiing.pref";
         Integer temperature = 10000;
 
         try {
             if(null != args[0] && !args[0].isEmpty()) {
                 inputFile = args[0];
             }
-            if(null != args[1] && !args[1].isEmpty()) {
-                outPutFile = args[0];
-            }
-            if (null != args[2] && !args[2].isEmpty()) {
-                temperature = Integer.parseInt(args[2]);
+            if (null != args[1] && !args[1].isEmpty()) {
+                temperature = Integer.parseInt(args[1]);
             }
 
         } catch (Exception e) {
-            System.out.println("If all input arguments are not given "
+            System.out.println("If inputs arguments are not given, then"
                     + "default"
                     + "values are taken.");
         }

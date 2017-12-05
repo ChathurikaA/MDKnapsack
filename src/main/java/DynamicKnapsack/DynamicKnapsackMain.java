@@ -2,20 +2,19 @@ package DynamicKnapsack;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+/**
+ * Class implementing main method for dynamic programming method.
+ */
 public class DynamicKnapsackMain {
 
     public static void main(String... args) throws IOException {
 
         String inputFile = "./data.pref";
-        String outPutFile = "result.pref";
+        String outPutFile = "resultOfDynamicProgramming.pref";
 
         try {
             if(null != args[0] && !args[0].isEmpty()) {
                 inputFile = args[0];
-            }
-            if(null != args[1] && !args[1].isEmpty()) {
-                outPutFile = args[0];
             }
         } catch (Exception e) {
             System.out.println("If all input arguments are not given default"

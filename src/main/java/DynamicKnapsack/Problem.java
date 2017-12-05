@@ -2,6 +2,9 @@ package DynamicKnapsack;
 
 import java.util.List;
 
+/**
+ * Class implementing to store the MultiDimensionalKnapsack Problem.
+ */
 public class Problem {
     public static Integer noOfTasks;
     public static Integer noOfResources;
