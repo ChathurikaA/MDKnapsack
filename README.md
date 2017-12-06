@@ -6,7 +6,7 @@ This package consists:
 * Genetic Search based algorithm 
 * Simulated Annealing based algorithm 
 
-## How to run your programs
+## How to run exectable jar files. 
 
 Go to the *ExecutableJarFiles* directory.
 
@@ -36,7 +36,7 @@ Go to the *ExecutableJarFiles* directory.
     java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population> <no_of_iteration>
     
    ```
-   *siz_of_the_intial_population* argument sets the initial population size to the given value. The default population size is 4. no_of_iteration specify the number of new children (chromosome) needed to be generated. The default value if 10000. 
+   *siz_of_the_intial_population* argument sets the initial population size to the given value. The default population size is 4. *no_of_iteration specify* the number of new children (chromosome) needed to be generated. The default value if 10000. 
  
   
  * **To run the Simulated Annealing based implementation: Go to ExecutableJarFiles directly and run the following command.**
