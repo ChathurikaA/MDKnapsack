@@ -75,7 +75,7 @@ public class DynamicKnapsackSolver {
         }
     }
 
-    public boolean checkFeasiblity(List<Integer> solution) {
+    private boolean checkFeasiblity(List<Integer> solution) {
         List<Integer> boundryValues = new ArrayList<Integer>();
         boundryValues.addAll(Problem.boundaries);
 

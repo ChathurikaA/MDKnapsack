@@ -17,7 +17,7 @@ public class RepairOperator {
     /**
      * Constructor that take Sorted list of tasks in ascending order according to the pseudo-utility ratio.
      */
-    protected RepairOperator(List<Integer> sortedTasksList) {
+     public RepairOperator(List<Integer> sortedTasksList) {
          this.sortedTasksListBasedOnSUR = sortedTasksList;
      }
 
@@ -128,7 +128,7 @@ public class RepairOperator {
      * @param values
      * @return
      */
-    protected Long calculateId(List<Integer> values){
+    private Long calculateId(List<Integer> values){
         Long id = new Long(0);
         for(int i = Problem.numberOfTasks - 1; i >= 0; i--){
             id += values.get(i) * (long)Math.pow(2, i);
