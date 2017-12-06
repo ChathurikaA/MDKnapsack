@@ -56,9 +56,10 @@ public class DynamicKnapsackSolver {
 
     public void findSolution(Integer maxValue, Integer checkPoint, List<Integer> solution, Integer partialSum) {
         List<Integer> tempSolution = new ArrayList<Integer>();
-        if (partialSum == (int) maxValue) {
+        if ((int) partialSum == (int) maxValue) {
             if (checkFeasiblity(solution)) {
-                globalSolution = solution;
+                globalSolution.clear();
+                globalSolution.addAll(solution);
                 return;
             }
         } else if (partialSum > maxValue) {
@@ -80,7 +81,7 @@ public class DynamicKnapsackSolver {
 
         for (int i = 0; i < solution.size(); i++) {
             for (int j = 0; j < Problem.noOfResources; j++) {
-                Integer value = boundryValues.get(j) - Problem.weights.get(i).get(j);
+                Integer value = boundryValues.get(j) - Problem.weights.get(solution.get(i)).get(j);
                 if (value >= 0) {
                     boundryValues.remove((int) j);
                     boundryValues.add(j, value);

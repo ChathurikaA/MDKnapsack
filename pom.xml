@@ -31,7 +31,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>SimulatedAnnealingKnapsack/SimulatedAnnealingKnapsackMain</mainClass>
+                            <mainClass>DynamicKnapsack/DynamicKnapsackMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

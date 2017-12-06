@@ -33,10 +33,10 @@ Go to the *ExecutableJarFiles* directory.
   ```
   This will read the data from the file specified in the file_path and out put the result to the **resultOfGenetic.pref** file. 
   ```
-    java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population>
+    java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population> <no_of_iteration>
     
    ```
-   siz_of_the_intial_population argument sets the initial population size to the given value. The default population size is 4. 
+   siz_of_the_initial_population argument sets the initial population size to the given value. The default population size is 4. no_of_iteration specify the number of new children (chromosome) needed to be generated. The default value if 10000. 
  
   
  * To run the **Simulated Annealing** based implementation: Go to ExecutableJarFiles directly and run the following command.
@@ -50,7 +50,7 @@ Go to the *ExecutableJarFiles* directory.
   ```
   This will read the data from the file specified in the file_path and out put the result to **resultOfSimulatedAnnealiing.pref** file. 
   ```
-    java -jar SimulatedAnnealingMKP.jar <file_path> <initial_temperature_value>
+    java -jar SimulatedAnnealingMKP.jar <file_path> <initial_temperature_value> 
     
    ```
    initial_temperature-value argument sets the initial temperature value to the given value. Default temperature value is 10000.

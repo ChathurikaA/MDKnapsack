@@ -17,6 +17,7 @@ public class LocalSearchKnapsackMain {
         String outPutFile = "resultOfGenetic.pref";
         boolean noFesiableSolution = false;
         int initialPopulation = 4;
+        int noOfIteration = 10000;
         int count = 0;
 
         try {
@@ -26,6 +27,10 @@ public class LocalSearchKnapsackMain {
 
             if (null != args[1] && !args[1].isEmpty()) {
                 initialPopulation = Integer.parseInt(args[1]);
+            }
+
+            if (null != args[2] && !args[2].isEmpty()) {
+                noOfIteration = Integer.parseInt(args[2]);
             }
 
         } catch (Exception e) {
@@ -45,11 +50,7 @@ public class LocalSearchKnapsackMain {
         try {
            population = new Population(initialPopulation);
         } catch (MKPImplemetationException e) {
-            if(Population.states.size() == 1 && Population.size != 1) {
-                noFesiableSolution = true;
-            } else {
-                throw new MKPImplemetationException(e);
-            }
+            noFesiableSolution = true;
         }
 
         GeneticSearcher geneticSearcher = new GeneticSearcher();
@@ -58,7 +59,7 @@ public class LocalSearchKnapsackMain {
         State repaired;
 
         if (!noFesiableSolution) {
-        for (count = 0; count <= 10000; count++) {
+        for (count = 0; count <= noOfIteration; count++) {
             boolean expire = false;
             int j = 0;
             do {
@@ -85,12 +86,21 @@ public class LocalSearchKnapsackMain {
         if (!noFesiableSolution) {
             writer.writeOutput(Population.maxState.form, outPutFile);
         } else {
-            List<Integer> list = new ArrayList();
-            for (Map.Entry<Long, State> entry : Population.states.entrySet())
-            {
-                list = entry.getValue().form;
+            if (Population.states.size() != 0) {
+                //if it is impossible to fill the initial population then get the state with maximum fitness as optimum
+                //solution
+                List<Integer> maxForm = new ArrayList<>();
+                long maxFitness = 0;
+                for (Map.Entry<Long, State> entry : Population.states.entrySet()) {
+                    if (maxFitness <= entry.getValue().fitnessScore) {
+                        maxForm = entry.getValue().form;
+                    }
+                }
+                writer.writeOutput(maxForm, outPutFile);
+            } else {
+                 throw new MKPImplemetationException("Couldn't initialize the initial population. Please"
+                         + "reduce the population size and retry");
             }
-            writer.writeOutput(list, outPutFile);
         }
     }
 }

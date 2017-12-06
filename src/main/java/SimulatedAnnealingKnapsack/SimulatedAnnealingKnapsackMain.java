@@ -37,17 +37,20 @@ public class SimulatedAnnealingKnapsackMain {
         SimulatedAnnealingSearcher searcher = new SimulatedAnnealingSearcher();
         State next;
 
-        while(temperature > 0){
+        State maxState = current;
+        while(temperature > 0) {
             State temp = searcher.getNextState(current);
             next = repairOperator.repairState(temp);
             if(searcher.updateState(current, next, temperature)){
                 current = next;
+                if (maxState.fitnessScore < current.fitnessScore) {
+                    maxState = current;
+                }
             }
             temperature--;
         }
 
         SimulatedAnnealingKnapsack.OutputWriter outputWriter = new SimulatedAnnealingKnapsack.OutputWriter();
-        outputWriter.writeOutput(current.form, outPutFile);
+        outputWriter.writeOutput(maxState.form, outPutFile);
     }
-
 }
