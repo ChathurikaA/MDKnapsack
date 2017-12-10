@@ -15,23 +15,23 @@ Go to the *ExecutableJarFiles* directory.
  ```
  java -jar DynamicProgrammingMKP.jar
  ```
- This will read the data from the file *data.pref* in the project directly and out put the result to the  *resultOfDynamicProgramming.pref* file.
+ This will read the data from the file *data.pref* in the project directly and output the result to the  *resultOfDynamicProgramming.pref* file.
  
 ```
  java -jar DynamicProgrammingMKP.jar <file_path>
  ```
- This will read the data from the file specified in the *file_path* and out put the result to the *resultOfDynamicProgramming.pref* file.
+ This will read the data from the file specified in the *file_path* and output the result to the *resultOfDynamicProgramming.pref* file.
  
  * **To run the Genetic Search based implementation: go to ExecutableJarFiles directly and run the following command.**
  ```
   java -jar GeneticSearchMKP.jar 
   ```
- This will read the data from the file *data.pref* in the project directly and out put the result to the *resultOfGenetic.pref* file.
+ This will read the data from the file *data.pref* in the project directly and output the result to the *resultOfGenetic.pref* file.
  
  ```
   java -jar GeneticSearchMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the *file_path* and out put the result to the *resultOfGenetic.pref* the file. 
+  This will read the data from the file specified in the *file_path* and output the result to the *resultOfGenetic.pref* the file. 
   ```
     java -jar GeneticSearchMKP.jar <file_path> <siz_of_the_intial_population> <no_of_iteration>
     
@@ -43,12 +43,12 @@ Go to the *ExecutableJarFiles* directory.
  ```
   java -jar SimulatedAnnealingMKP.jar
   ```
- This will read the data from the file *data.pref* in the project directly and out put the result to the *resultOfSimulatedAnnealiing.preff* file.
+ This will read the data from the file *data.pref* in the project directly and output the result to the *resultOfSimulatedAnnealiing.preff* file.
  
  ```
   java -jar SimulatedAnnealingMKP.jar <file_path> 
   ```
-  This will read the data from the file specified in the *file_path* and out put the result to the *resultOfSimulatedAnnealiing.pref* file. 
+  This will read the data from the file specified in the *file_path* and output the result to the *resultOfSimulatedAnnealiing.pref* file. 
   ```
     java -jar SimulatedAnnealingMKP.jar <file_path> <initial_temperature_value> 
     
@@ -58,5 +58,5 @@ Go to the *ExecutableJarFiles* directory.
 ## How to run source code.
 * Open the project as a maven project. 
 * Go to project directory and run the command `mvn clean install` to build the project.
-* you can run the main class named with suffix **Main** in the each package except the commonMain package. This will read the data from "data.pref" file in the same directory and out put the result to the file name with **result** prefix.   
+* you can run the main class named with suffix **Main** in the each package except the commonMain package. This will read the data from "data.pref" file in the same directory and output the result to the file name with **result** prefix.   
  
